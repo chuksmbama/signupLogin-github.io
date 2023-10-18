@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+   <script>
+      $(document).ready(function(){
+         $('.log').click(function(){
+            $('.sign-up').slideToggle('slow', function(){
+               $('.login-box').hide('slow');
+            });
+         })
+         $('.sig').click(function(){
+            $('.login-box').slideToggle('slow', function(){
+               $('.sign-up').hide('slow');
+            });
+         })
+      })
+   </script>
+   <title>jQuery Assign</title>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+      body {
+         background-image: url(background2.jpg);
+         background-size: cover;
+         background-position: center;
+         background-attachment: fixed;
+      }
+      .login-box {
+         background: rgba(255, 255, 255, 0.075);
+         width: 500px;
+         height: 550px;
+         padding: 50px;
+         border-radius: 30px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      .top-header {
+         font-size: 40px;
+         text-align: center;
+         color: #fff;
+         padding-bottom: 40px;
+      }
+      .input{
+         height: 65px;
+         width: 100%;
+         background: transparent;
+         padding: 10px 10px;
+         font-size: 16px;
+         color: #fff;
+         margin-bottom: 30px;
+         border: 2px solid #fff;
+         border-radius: 30px;
+         outline: none;
+      }
+      .left {
+         float: left;
+         width: 60%;
+         padding-left: 20px;
+      }
+      .left label {
+         color: #fff;
+      }
+      .right {
+         float: left;
+         width: 40%;
+      }
+      .right a{
+         color: #fff;
+         text-decoration: none;
+      }
+      .input-field3 {
+         float: left;
+         width: 100%;
+         margin-top: 20px;
+         margin-bottom: 20px;
+      }
+      .input-field {
+         margin-bottom: 10px;
+      }
+      .submit {
+         width: 100%;
+         height: 50px;
+         border-radius: 30px;
+         border: none;
+         font-size: 15px;
+         font-weight: bold;
+         color: #fff;
+         cursor: pointer;
+         background-image: linear-gradient(90deg, rgb(5, 51, 51), rgba(18, 180, 120, 0.683));
+      }
+      .submit:hover {
+         background-image: linear-gradient(90deg, rgb(5, 41, 41), 
+         rgba(20, 134, 93, 0.683));
+      }
+      #sign {
+         color: #fff;
+         text-align: center;
+      }
+      #sign a {
+         padding-left: 5px;
+         color: #fff;
+         text-decoration: none;
+      }
+      #sign a:hover {
+         text-decoration: underline;
+      }
+      .sign-up {
+         background: rgba(255, 255, 255, 0.075);
+         width: 500px;
+         height: 650px;
+         padding: 50px;
+         border-radius: 30px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         display: none;
+      }
+      .sinput{
+         height: 50px;
+         width: 100%;
+         background: transparent;
+         padding: 10px 10px;
+         font-size: 16px;
+         color: #fff;
+         margin-bottom: 30px;
+         border: none;
+         outline: none;
+         border-bottom: 2px solid #fff;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="login-box">
+         <div class="top-header">
+            <header><b>LOGIN</b></header>
+         </div>
+         <div class="input-field">
+            <input type="text" class="input" placeholder="UserName">
+         </div>
+         <div class="input-field2">
+            <input type="password" class="input" placeholder="Password">
+         </div>
+         <div class="remember">
+            <div class="left">
+               <input type="checkbox">
+               <label for="check">Remember Me</label>
+            </div>
+            <div class="right">
+               <label for=""><a href="#">Forgot password?</a></label>
+            </div>
+         </div>
+         <div class="input-field3">
+            <input type="submit" value="LOGIN" class="submit">
+         </div>
+         <p id="sign">Don't have an account?<a href="#" class="log">Signup Here</a></p>
+      </div>
+
+      <div class="sign-up">
+         <div class="top-header">
+            <header><b>SIGN-UP</b></header>
+         </div>
+         <div class="sign-input">
+            <input type="text" class="sinput" placeholder="First Name">
+         </div>
+         <div class="sign-input">
+            <input type="text" class="sinput" placeholder="Last Name">
+         </div>
+         <div class="sign-input">
+            <input type="email" class="sinput" placeholder="Email">
+         </div>
+         <div class="sign-input">
+            <input type="password" class="sinput" placeholder="Password">
+         </div>
+         <div class="sign-input">
+            <input type="password" class="sinput" placeholder="Confirm Password">
+         </div>
+         <div class="signup-btn">
+            <input type="submit" value="SIGN UP" class="submit">
+         </div>
+         <p id="sign">Already have an account?<a href="#" class="sig">Login Here</a></p>
+      </div>
+   </div>
+   
+
+</body>
+</html>
